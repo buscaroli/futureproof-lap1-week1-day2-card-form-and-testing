@@ -26,3 +26,14 @@ describe('testing the form element', () => {
     expect(window.getComputedStyle(submitForm).display).not.toEqual('none')
   })
 })
+
+describe('testing the card element', () => {
+  beforeEach(() => {
+    document.documentElement.innerHTML = html.toString()
+  })
+
+  it('tests the card does not exist when page is loaded', () => {
+    const card = document.querySelector('.card')
+    expect(card).not.toBeTruthy()
+  })
+})

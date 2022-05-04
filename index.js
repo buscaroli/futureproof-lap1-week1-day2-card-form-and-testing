@@ -1,6 +1,8 @@
 const myForm = document.querySelector('#form-id')
 const body = document.querySelector('body')
 
+// maps the value of the <select> element to a String
+// to be shown in the Card
 const eventDictionary = {
   Birthday: 'Have a lovely Birthday!',
   Holiday: 'Have a Wonderful Time! Enjoy yourself!',
@@ -12,17 +14,17 @@ myForm.addEventListener('submit', (e) => {
 
   createCard()
 
-  console.log('myForm ', myForm)
   myForm.style.display = 'none'
 })
 
 // create the card and append it to 'main'
 function createCard() {
+  // references for the required elementes
   const formName = document.querySelector('#form-name')
   const event = document.querySelector('#event')
   const selectedOptionText = event.options[event.selectedIndex].text
-
   formText = document.querySelector('#form-text')
+
   // card
   const card = document.createElement('div')
   card.classList.add('card')
@@ -38,10 +40,6 @@ function createCard() {
   // custom message from the text area
   const customMessage = document.createElement('h5')
   customMessage.textContent = formText.value
-
-  // console.log(
-  //   `dearName: ${dearName.textContent}\ndefaultMessage: ${eventDictionary[selectedOptionText]}\ncustomMessage: ${customMessage.textContent}\n`
-  // )
 
   card.append(dearName)
   card.append(defaultMessage)

@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "concurrently \"watchify ./index.js -o bundle.js\" \"python3 -m http.server\""
+    "dev": "concurrently \"watchify ./index.js -o bundle.js\" \"python3 -m http.server\"",
+    "test": "jest --watchAll"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.1.0",
+    "jest": "^28.0.3",
     "jest-environment-jsdom": "^28.0.2",
     "watchify": "^4.0.0"
   }

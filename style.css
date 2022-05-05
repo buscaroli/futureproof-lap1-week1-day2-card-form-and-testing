@@ -1,10 +1,27 @@
-*, *:;after, *:;before {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
 }
 
 html {
   box-sizing: border-box;
+}
+
+body {
+width: 600px;
+margin: 0 auto;
+
+}
+
+h1 {
+  padding-left: 100px;
+  font-size: 2rem;
+  margin: 30px 0px;
+  color: darkslategrey;
+}
+
+h2, h3, h5 {
+  text-shadow: 2px 2px darkslateblue;
 }
 
 h2 {
@@ -19,15 +36,10 @@ h5 {
   font-size: 1.5rem;
 }
 
-header {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
 
 main {
   max-width: 400px;
-  margin: 0 auto;
+  
 
 }
 
@@ -54,11 +66,15 @@ input, textarea, select {
 }
 
 .card {
-  padding: 10px;
+  
   border: 2px solid  slategray;
   border-radius: 10px;;
   text-align: center;
-  background-color: rgb(233, 233, 111);
+  /* background-color: rgb(233, 233, 111); */
   color: darkslategray;
   box-shadow: 5px 5px lightgrey;
+  
+  object-fit: cover;
+  background-size: 600px;
+  
 }

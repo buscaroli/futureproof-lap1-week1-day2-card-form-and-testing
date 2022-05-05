@@ -41,7 +41,7 @@ Many Thanks to [Gio](https://github.com/Gioele-M) and [Aaron](https://github.com
 
 ### HOW TO USE
 
-To run a local server
+To run on a local server
 
 ```bash
 npm run dev

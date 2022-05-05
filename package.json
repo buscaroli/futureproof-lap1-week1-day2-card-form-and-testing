@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.1.0",
     "jest": "^28.0.3",
-    "jest-environment-jsdom": "^28.0.2",
+    "jest-environment-jsdom": "^28.0.2"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0",
     "watchify": "^4.0.0"
   }
 }

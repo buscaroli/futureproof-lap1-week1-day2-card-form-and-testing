@@ -17,9 +17,11 @@ myForm.addEventListener('submit', (e) => {
   myForm.style.display = 'none'
 })
 
-// create the card and append it to 'main'
+// Main function: creates the card, fetches the background and appends the card to the <body>
 function createCard() {
-  // fetches the background picture for the card
+  //
+  // Creating the references fot the DOM elements
+  //
 
   // references for the required elementes
   const formName = document.querySelector('#form-name')
@@ -27,26 +29,30 @@ function createCard() {
   const selectedOptionText = event.options[event.selectedIndex].text
   formText = document.querySelector('#form-text')
 
-  // card
+  // create the card and append it to 'main'
   const card = document.createElement('div')
   card.classList.add('card')
 
   // header with the Name of the Person
   const dearName = document.createElement('h2')
-  dearName.textContent = `Dear ${formText.textContent},`
+  dearName.textContent = `Dear ${formName.value},`
+  dearName.style.marginBottom = '10px'
 
   // default message from the dropdown
   const defaultMessage = document.createElement('h3')
   defaultMessage.textContent = eventDictionary[selectedOptionText]
+  defaultMessage.style.marginBottom = '10px'
 
   // custom message from the text area
   const customMessage = document.createElement('h5')
   customMessage.textContent = formText.value
 
+  // call the function to get the picture, build the card and append it to the <body>
   getBgPicture()
 
+  //
+  // Fetching Background, Building Card, Appending it
   function getBgPicture() {
-    // fetches the background picture for the card
     fetch(
       `https://api.unsplash.com/search/photos?query=${selectedOptionText}&client_id=HdzmK6fzGYHhNHNGycm6rxKupbb2nt4bg2oz3E_xxNY`
     )
@@ -56,16 +62,13 @@ function createCard() {
       })
       .then((data) => {
         console.log('data -> ', data)
-        // console.log(
-        //   `https://api.unsplash.com/search/photos?query=${selectedOptionText}&client_id=HdzmK6fzGYHhNHNGycm6rxKupbb2nt4bg2oz3E_xxNY`
-        // )
-
-        // console.log('key -> ', selectedOptionText)
-
-        // console.log('data ', data.results[0].urls.regular)
-        // console.log(`url("${data}")`)
 
         card.style.backgroundImage = `url("${data.results[0].urls.regular}")`
+
+        card.style.height = '200px'
+        card.style.width = '300px'
+        card.style.color = 'white'
+        card.style.padding = '50px'
 
         card.append(dearName)
         card.append(defaultMessage)

@@ -33,8 +33,22 @@ Exercise for the Auguste Cohort of the Futureproof Bootcamp.
 ### TODO
 
 - Look for a separate testing tool that allows firing click events
-- Try to download a picture from Unsplash and add that as a background to the card
+- ~~Try to download a picture from Unsplash and add that as a background to the card~~ DONE
 
 ### TEAM
 
-Thank you to [Gio](https://github.com/Gioele-M) ans [Aaron](https://github.com/Aaron-Marsh) for brainstorming the first part of the exercise with me.
+Many Thanks to [Gio](https://github.com/Gioele-M) and [Aaron](https://github.com/Aaron-Marsh) for brainstorming the first part of the exercise with me.
+
+### HOW TO USE
+
+To run a local server
+
+```bash
+npm run dev
+```
+
+To run the test suite
+
+```bash
+npm test
+```

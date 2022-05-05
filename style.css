@@ -1,10 +1,15 @@
-*, *:;after, *:;before {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
 }
 
 html {
   box-sizing: border-box;
+}
+
+body {
+width: 800px;
+margin: 0 auto;
 }
 
 h2 {
@@ -58,7 +63,9 @@ input, textarea, select {
   border: 2px solid  slategray;
   border-radius: 10px;;
   text-align: center;
-  background-color: rgb(233, 233, 111);
+  /* background-color: rgb(233, 233, 111); */
   color: darkslategray;
   box-shadow: 5px 5px lightgrey;
+  /* background-image: url("https://learn.zoner.com/wp-content/uploads/2018/08/landscape-photography-at-every-hour-part-ii-photographing-landscapes-in-rain-or-shine.jpg"); */
+  
 }
